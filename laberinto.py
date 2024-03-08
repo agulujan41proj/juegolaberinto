@@ -3,6 +3,7 @@
 #1. Importar el módulo Pygame.
 import pygame
 import sys
+from PersonajePrincipal import PersonajePrincipal
 #iniciar PyGame
 pygame.init()
 
@@ -29,6 +30,8 @@ def control_juego():
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
+#crear Personajes
+player = PersonajePrincipal(50,50,30,30,AZUL)
 
 
 #JUEGO
@@ -37,5 +40,6 @@ while True:
 
     control_juego()
 
+    player.render(screen)
     pygame.display.flip()
 
